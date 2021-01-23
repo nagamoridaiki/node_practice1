@@ -34,7 +34,7 @@ module.exports = {
 
   create: (req, res, next) => {
     if (req.skip) return next();
-    let newUser = new User(getUserParams(req.body));
+    const newUser = new User(getUserParams(req.body));
     User.register(newUser, req.body.password, (e, user) => {
       if (user) {
         req.flash("success", `${user.name}'s account created successfully!`);
@@ -49,13 +49,13 @@ module.exports = {
   },
 
   redirectView: (req, res, next) => {
-    let redirectPath = res.locals.redirect;
+    const redirectPath = res.locals.redirect;
     if (redirectPath !== undefined) res.redirect(redirectPath);
     else next();
   },
 
   delete: (req, res, next) => {
-    let userId = req.params.id;
+    const userId = req.params.id;
     User.findByIdAndRemove(userId)
       .then(() => {
         res.locals.redirect = "/users";
