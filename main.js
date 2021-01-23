@@ -1,20 +1,20 @@
 "use strict";
 
 const express = require("express"),
-  layouts = require("express-ejs-layouts"),
-  app = express(),
-  router = express.Router(),
-  homeController = require("./controllers/homeController"),
-  errorController = require("./controllers/errorController"),
-  usersController = require("./controllers/usersController.js"),
-  mongoose = require("mongoose"),
-  methodOverride = require("method-override"),
-  passport = require("passport"),
-  cookieParser = require("cookie-parser"),
-  expressSession = require("express-session"),
-  expressValidator = require("express-validator"),
-  connectFlash = require("connect-flash"),
-  User = require("./models/user");
+layouts = require("express-ejs-layouts"),
+app = express(),
+router = express.Router(),
+homeController = require("./controllers/homeController"),
+errorController = require("./controllers/errorController"),
+usersController = require("./controllers/usersController.js"),
+mongoose = require("mongoose"),
+methodOverride = require("method-override"),
+passport = require("passport"),
+cookieParser = require("cookie-parser"),
+expressSession = require("express-session"),
+expressValidator = require("express-validator"),
+connectFlash = require("connect-flash"),
+User = require("./models/user");
 
 mongoose.connect(
   "mongodb://localhost:27017/node_practice",

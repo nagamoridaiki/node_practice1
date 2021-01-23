@@ -1,14 +1,16 @@
 "use strict";
 
 const User = require("../models/user"),
- passport = require("passport"),
-  getUserParams = body => {
-    return {
-      name: body.name,
-      email: body.email,
-      password: body.password,
-    };
+
+passport = require("passport"),
+
+getUserParams = body => {
+  return {
+    name: body.name,
+    email: body.email,
+    password: body.password,
   };
+};
 
 module.exports = {
   index: (req, res, next) => {

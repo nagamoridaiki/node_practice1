@@ -1,10 +1,12 @@
 "use strict";
 
 const mongoose = require("mongoose"),
-  { Schema } = require("mongoose"),
-  passportLocalMongoose = require("passport-local-mongoose"),
 
- userSchema = new Schema(
+{ Schema } = require("mongoose"),
+
+passportLocalMongoose = require("passport-local-mongoose"),
+
+userSchema = new Schema(
   {
     name: {
       type: String,
