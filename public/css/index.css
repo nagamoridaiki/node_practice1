@@ -113,3 +113,15 @@ button[type=submit] {
     font-size: 2vw;
   }
 }
+
+.login-status {
+  position: absolute;
+  right: 10px;
+  top: 5px;
+}
+
+.login-status .bubble {
+  padding: 10px;
+  background: #c1ffc1;
+  border-radius: 20px;
+}
