@@ -1,0 +1,115 @@
+@import url("https://fonts.googleapis.com/css?family=Baloo+Bhaina");
+
+body {
+  margin: 0;
+  padding-top: 130px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #625a56;
+}
+
+
+
+#title {
+  color: #625a56;
+  margin: 0;
+  font-family: "Baloo Bhaina";
+  text-transform: uppercase;
+}
+
+img {
+  width: 100%;
+}
+
+a {
+  color: #333;
+  text-decoration: none;
+}
+
+#nav a {
+  text-decoration: none;
+}
+
+.nav-align {
+  text-align: center;
+  padding: 3px 0;
+}
+
+.container {
+  padding: 0% 10%;
+}
+
+.button {
+  padding: 0.3vw 1vw;
+  border-radius: 2px;
+  cursor: pointer;
+  display: inline-block;
+  margin-bottom: 2px;
+}
+
+
+.list-container {
+  padding: 0 20px;
+  border: 3px solid #ffb568;
+  border-radius: 1px;
+}
+
+.item-label {
+  font-weight: 600;
+  font-style: italic;
+  margin-right: 5px;
+}
+
+.data-form {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.flash {
+  width: 100%;
+  text-align: center;
+  padding: 10px 30px;
+  position: absolute;
+  top: 110px;
+  z-index: 2;
+}
+
+.error {
+  color: #fff;
+  background: rgba(209, 46, 42, 0.7);
+}
+
+.login {
+  position: absolute;
+  top: 0;
+  right: 10px;
+}
+
+button[type=submit] {
+  margin-top: 20px;
+}
+
+.login {
+  position: absolute;
+  right: 10px;
+  top: 5px;
+  padding: 10px;
+}
+
+.login p {
+  margin: 0;
+}
+
+.log-out {
+  display: inline-block;
+  padding: 0 8px;
+  border-radius: 10px;
+  background: #fff;
+}
+
+@media (max-width: 760px) {
+  .login {
+    overflow: hidden;
+    white-space: nowrap;
+    font-size: 2vw;
+  }
+}

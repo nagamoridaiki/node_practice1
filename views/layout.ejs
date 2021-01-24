@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=0.8, maximum-scale=1">
+	<title>Node.js Practice</title>
+	<link rel="stylesheet" href="/css/bootstrap.css">
+	<link rel="stylesheet" href="/css/index.css">
+</head>
+
+<body>
+	<div id="nav">
+		<div class="login">
+			<% if (loggedIn) { %>
+			<p>
+				<span class="log-out">
+					<a href="/users/logout">Logout</a>
+				</span>
+			</p>
+			<%} else {%>
+			<div class="col-sm nav-align">
+				<a href="/users/new">
+					<span class="button">Register</span>
+				</a>
+				<a href="/users/login">
+					<span class="button">Login</span>
+				</a>
+			</div>
+			<% } %>
+		</div>
+	</div>
+	<div class="flashes">
+		<% if (flashMessages) { %>
+		<% if (flashMessages.success) { %>
+		<div class="flash success">
+			<%= flashMessages.success %>
+		</div>
+		<% } else if (flashMessages.error) { %>
+		<div class="flash error">
+			<%= flashMessages.error %>
+		</div>
+		<% } %>
+		<% } %>
+	</div>
+
+	<div class="container">
+		<%- body %>
+	</div>
+
+</body>
+
+</html>
