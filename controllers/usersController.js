@@ -2,7 +2,7 @@
 
 const User = require("../models/user"),
 
-passport = require("passport"),
+const passport = require("passport"),
 
 getUserParams = body => {
   return {
