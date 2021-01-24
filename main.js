@@ -75,6 +75,7 @@ router.post(
   "/users/create",
   usersController.validate,
   usersController.create,
+  usersController.authenticate,
   usersController.redirectView
 );
 router.get("/users/login", usersController.login);

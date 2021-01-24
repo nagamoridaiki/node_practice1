@@ -11,13 +11,14 @@
 
 <body>
 	<div id="nav">
-		<div class="login">
+		<div class="login-status">
 			<% if (loggedIn) { %>
-			<p>
-				<span class="log-out">
+				<div class="bubble logged-in">
+					Logged in as <%= currentUser.name %>
+				</div>
+				<div class="log-out">
 					<a href="/users/logout">Logout</a>
-				</span>
-			</p>
+				</div>
 			<%} else {%>
 			<div class="col-sm nav-align">
 				<a href="/users/new">

@@ -38,7 +38,7 @@ module.exports = {
     User.register(newUser, req.body.password, (e, user) => {
       if (user) {
         req.flash("success", `${user.name}'s account created successfully!`);
-        res.locals.redirect = "/users/login";
+        res.locals.redirect = "/users/";
         next();
       } else {
         req.flash("error", `Failed to create user account because: ${e.message}.`);
@@ -79,6 +79,15 @@ module.exports = {
       .trim();
     req.check("email", "Email is invalid").isEmail();
     req.check("password", "Password cannot be empty").notEmpty();
+    req.check('password').isLength({ min: 7 }).withMessage("Password must be at least 7 characters");
+    req.check('passwordConfirm').custom(() => {
+      if (req.body.password === req.body.passwordConfirm) {
+        return true;
+      } else {
+        return false;
+      }
+    }).withMessage("Passwords don't match.");
+
     req.getValidationResult().then(error => {
       if (!error.isEmpty()) {
         let messages = error.array().map(e => e.msg);
