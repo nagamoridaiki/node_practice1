@@ -79,7 +79,7 @@ module.exports = {
       .trim();
     req.check("email", "Email is invalid").isEmail();
     req.check("password", "Password cannot be empty").notEmpty();
-    req.check('password').isLength({ min: 3 }).withMessage("Password must be at least 1 characters");
+    req.check('password').isLength({ min: 7 }).withMessage("Password must be at least 7 characters");
     req.check('passwordConfirm').custom(() => {
       if (req.body.password === req.body.passwordConfirm) {
         return true;
